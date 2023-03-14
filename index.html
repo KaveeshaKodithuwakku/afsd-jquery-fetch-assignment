@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mgt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
+    
+  <link rel="stylesheet" href="css/script.css">
+</head>
+<body onload="loadHome()">
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="assets/students.png" alt="" class="navbar-logo">
+            Student Management
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        
+          </button>
+          <div class="nav nav-pills nav justify-content-end">
+            <li class="nav-item mx-2">
+              <a onclick="loadHome()" class="nav-link active">Add Info</a>
+            </li>
+      
+      
+            <li class="nav-item mx-2">
+              <a onclick="loadView()" class="nav-link active">View All</a>
+            </li>
+            <!-- <ul class="navbar-nav">
+              <li class="nav-item">
+                <a onclick="loadHome()" class="nav-link">Add</a>
+              </li>
+              <li class="nav-item">
+                <a onclick="loadView()" class="nav-link">View All</a>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </nav>
+
+      <br>
+        <br>
+
+        <div id="home">
+            <div class="container">
+              <div class="row">
+                <div class="col text-center text-success">
+                  <h3>Add Students</h3>
+                </div>
+              </div>
+      
+              <br>
+              <br>
+      
+        <!-- add info form -->
+            <form class="px-5">
+              <div class="row mb-3">
+                <label for="id" class="col-sm-2 col-form-label">ID</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="id" >
+                </div>
+              </div>
+            
+              <div class="row mb-3">
+                <label for="name" class="col-sm-2 col-form-label">NAME</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="name">
+                </div>
+              </div>
+            
+              <div class="row mb-3">
+                <label for="address" class="col-sm-2 col-form-label">ADDRESS</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="address">
+                </div>
+              </div>
+            
+              <div class="row mb-3">
+                <label for="salary" class="col-sm-2 col-form-label ">SALARY</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="salary">
+                </div>
+              </div>
+        
+            </form>
+
+            <button onclick="saveData()" type="submit" class="btn btn-primary col text-center">Save Student</button>
+      
+            <div style="clear: right">
+              <img src="assets/istockphoto-1330902575-612x612.jpg" alt="" style="float: right;">
+            </div>
+
+            <br>
+            <br>
+
+            <div id="response">
+
+            </div>
+        </div>
+
+        <div id="viewData">
+
+          <table id="dTable" class="display" style="width: 100%">
+            <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Salary</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Salary</th>
+            </tr>
+            </tfoot>
+
+          </table>
+  
+  
+      </div>
+       <!-- <div id="viewTable" class="loadall"> -->
+        <!-- <div id="viewTable">
+          <div class="container-fluid">
+            <table id="showTable" class="display" style="width: 100%">
+              <thead>
+              <tr>
+                <th>#Id</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Salary</th>
+              </tr>
+              <tr>
+                <th>#Id</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Salary</th>
+              </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>#Id</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Salary</th>
+                </tr>
+                </tfoot>
+            </table> -->
+
+          <!-- </div> -->
+           
+        <!-- </div> -->
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+        <script src="js/main.js"></script>
+      
+</body>
+</html>
